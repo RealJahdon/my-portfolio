@@ -17,5 +17,5 @@ jobs:
         run: docker build -t ervinj27/portfolio .
       - name: Push image
         run: |
-              docker login -u ervinj27 -p ${{secrets.REGISTRY_PASS}}
-              docker push ervinj27/portfolio
+              docker login -u ${{secrets.REGISTRY_USER}} -p ${{secrets.REGISTRY_PASS}}
+              docker push ${{secrets.REGISTRY_USER}}/portfolio
